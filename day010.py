@@ -1,30 +1,17 @@
-def solution(keymap, targets):
-    answer = []
+def solution(s, skip, index):
+    answer = ''
     
-    for target in targets:
-        tempAnswer = 0
-        unableCheck = False
-        for i in range(len(target)):
-            keyHit = []
-
-            for j in range(len(keymap)):
-                keyHit.append(keymap[j].find(target[i]))
-            keyHit.sort()
-
-            ans = -1
-            for j in range(len(keyHit)):
-                if(keyHit[j] == -1):
-                    continue
-                else:
-                    ans = keyHit[j]+1
-                    break
-            if(ans == -1):
-                unableCheck = True
-                break
+    for ch in s:
+        temp = ord(ch)
+        i = 0
+        while(i<index):
+            temp = temp+1
+            if(temp > ord('z')):
+                temp = temp-26
+            if(chr(temp) in skip):
+                continue
             else:
-                tempAnswer = tempAnswer+ans
-        if(unableCheck == False):
-            answer.append(tempAnswer)
-        else:
-            answer.append(-1)
+                i=i+1
+        answer = answer+chr(temp)
+                
     return answer
