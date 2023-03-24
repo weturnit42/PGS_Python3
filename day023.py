@@ -27,34 +27,34 @@ def solution(n, edge):
 #             answer = answer+1
 
 #     edgeMatrix = [[9999999]*n for i in range(n)]
-#     dist = [99999999]*n
-#     dist[0] = 0
-#     visited = [False]*n
-#     visited[0] = True
-    
-#     for i in range(n):
-#         edgeMatrix[i][i] = 0
-    
-#     for _edge in edge:
-#         edgeMatrix[_edge[0]-1][_edge[1]-1] = 1
-#         edgeMatrix[_edge[1]-1][_edge[0]-1] = 1
-#     # print(edgeMatrix)
-#     for i in range(n):
-#         whereToGo = 0
-#         minDist = 99999999
+    #     dist = [99999999]*n
+    #     dist[0] = 0
+    #     visited = [False]*n
+    #     visited[0] = True
         
-#         for j in range(1,n):
-#             if dist[j] < minDist and not visited[j]:
-#                 minDist = dist[j]
-#                 whereToGo = j
-#         visited[whereToGo] = True
-#         # print("whereToGo", whereToGo)
-#         for j in range(len(edgeMatrix[whereToGo])):
-#             # print(j)
-#             cost = dist[whereToGo] + edgeMatrix[whereToGo][j]
+    #     for i in range(n):
+    #         edgeMatrix[i][i] = 0
+        
+    #     for _edge in edge:
+    #         edgeMatrix[_edge[0]-1][_edge[1]-1] = 1
+    #         edgeMatrix[_edge[1]-1][_edge[0]-1] = 1
+    #     # print(edgeMatrix)
+    #     for i in range(n):
+    #         whereToGo = 0
+    #         minDist = 99999999
             
-#             if cost < dist[j]:
-#                 dist[j] = cost
+    #         for j in range(1,n):
+    #             if dist[j] < minDist and not visited[j]:
+    #                 minDist = dist[j]
+    #                 whereToGo = j
+    #         visited[whereToGo] = True
+    #         # print("whereToGo", whereToGo)
+    #         for j in range(len(edgeMatrix[whereToGo])):
+    #             # print(j)
+    #             cost = dist[whereToGo] + edgeMatrix[whereToGo][j]
+                
+    #             if cost < dist[j]:
+    #                 dist[j] = cost
 
 #     # print(dist)
     

@@ -99,11 +99,6 @@ class CycleError(Exception): # 사용자 정의 에러
 #                         print(e[0], 'nonDirectParent', nonDirectParent, 'trace', trace, 'cycle', cycle)
 #                         raise CycleError("cycle")
 
-from itertools import combinations 
-
-def cycleChecker(edge, k):
-
-
 # v = 7
 # e = 9
 # parent = [-1] * v
